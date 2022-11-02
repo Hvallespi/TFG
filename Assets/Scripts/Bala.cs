@@ -12,7 +12,7 @@ public class Bala : MonoBehaviour
         objetivo = _objetivo;
     }
 
-    // Update is called once per frame
+    //Prueba
     void Update()
     {
         if (objetivo == null)
