@@ -16,7 +16,8 @@ public class GeneradorOleadas : MonoBehaviour
         if (cuentaAtras <=0f)
         {
             StartCoroutine(generarOleada());
-            cuentaAtras = tiempoOleadas;
+            //cuentaAtras = tiempoOleadas;
+            cuentaAtras = 5000f;
         }
 
         cuentaAtras -= Time.deltaTime;

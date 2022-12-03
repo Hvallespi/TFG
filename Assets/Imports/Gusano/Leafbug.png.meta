@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 80
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Leafbug_0
+      name: Leafbug_IddleDown_1
       rect:
         serializedVersion: 2
         x: 0
@@ -112,7 +112,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -125,7 +125,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_1
+      name: Leafbug_IddleDown_2
       rect:
         serializedVersion: 2
         x: 64
@@ -133,7 +133,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,7 +146,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_2
+      name: Leafbug_IddleDown_3
       rect:
         serializedVersion: 2
         x: 128
@@ -154,7 +154,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,7 +167,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_3
+      name: Leafbug_IddleDown_4
       rect:
         serializedVersion: 2
         x: 192
@@ -175,7 +175,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,7 +188,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_4
+      name: Leafbug_IddleDown_5
       rect:
         serializedVersion: 2
         x: 256
@@ -196,7 +196,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,15 +209,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_5
+      name: Leafbug_IddleDown_6
       rect:
         serializedVersion: 2
-        x: 320
+        x: 321
         y: 512
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,7 +230,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_6
+      name: Leafbug_IddleUp_1
       rect:
         serializedVersion: 2
         x: 0
@@ -238,7 +238,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,7 +251,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_7
+      name: Leafbug_IddleUp_2
       rect:
         serializedVersion: 2
         x: 64
@@ -259,7 +259,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -272,7 +272,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_8
+      name: Leafbug_IddleUp_3
       rect:
         serializedVersion: 2
         x: 128
@@ -280,7 +280,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -293,7 +293,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_9
+      name: Leafbug_IddleUp_4
       rect:
         serializedVersion: 2
         x: 192
@@ -301,7 +301,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -314,7 +314,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_10
+      name: Leafbug_IddleUp_5
       rect:
         serializedVersion: 2
         x: 256
@@ -322,7 +322,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -335,7 +335,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_11
+      name: Leafbug_IddleUp_6
       rect:
         serializedVersion: 2
         x: 320
@@ -343,7 +343,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -356,7 +356,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_12
+      name: Leafbug_IddleSide_1
       rect:
         serializedVersion: 2
         x: 0
@@ -364,7 +364,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -377,7 +377,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_13
+      name: Leafbug_IddleSide_2
       rect:
         serializedVersion: 2
         x: 64
@@ -385,7 +385,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -398,7 +398,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_14
+      name: Leafbug_IddleSide_3
       rect:
         serializedVersion: 2
         x: 128
@@ -406,7 +406,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -419,7 +419,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_15
+      name: Leafbug_IddleSide_4
       rect:
         serializedVersion: 2
         x: 192
@@ -427,7 +427,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -440,7 +440,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_16
+      name: Leafbug_IddleSide_5
       rect:
         serializedVersion: 2
         x: 256
@@ -448,7 +448,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -461,7 +461,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_17
+      name: Leafbug_IddleSide_6
       rect:
         serializedVersion: 2
         x: 320
@@ -469,7 +469,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -482,7 +482,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_18
+      name: Leafbug_MoveDown_1
       rect:
         serializedVersion: 2
         x: 0
@@ -490,7 +490,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -503,7 +503,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_19
+      name: Leafbug_MoveDown_2
       rect:
         serializedVersion: 2
         x: 64
@@ -511,7 +511,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -524,7 +524,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_20
+      name: Leafbug_MoveDown_3
       rect:
         serializedVersion: 2
         x: 128
@@ -532,7 +532,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -545,7 +545,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_21
+      name: Leafbug_MoveDown_4
       rect:
         serializedVersion: 2
         x: 192
@@ -553,7 +553,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -566,7 +566,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_22
+      name: Leafbug_MoveDown_5
       rect:
         serializedVersion: 2
         x: 256
@@ -574,7 +574,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -587,7 +587,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_23
+      name: Leafbug_MoveDown_6
       rect:
         serializedVersion: 2
         x: 320
@@ -595,7 +595,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -608,7 +608,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_24
+      name: Leafbug_MoveDown_7
       rect:
         serializedVersion: 2
         x: 384
@@ -616,7 +616,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -629,7 +629,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_25
+      name: Leafbug_MoveDown_8
       rect:
         serializedVersion: 2
         x: 448
@@ -637,7 +637,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -650,7 +650,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_26
+      name: Leafbug_MoveUp_1
       rect:
         serializedVersion: 2
         x: 0
@@ -658,7 +658,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -671,7 +671,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_27
+      name: Leafbug_MoveUp_2
       rect:
         serializedVersion: 2
         x: 64
@@ -679,7 +679,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -692,7 +692,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_28
+      name: Leafbug_MoveUp_3
       rect:
         serializedVersion: 2
         x: 128
@@ -700,7 +700,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -713,7 +713,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_29
+      name: Leafbug_MoveUp_4
       rect:
         serializedVersion: 2
         x: 192
@@ -721,7 +721,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -734,15 +734,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_30
+      name: Leafbug_MoveUp_5
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
+        x: 255
+        y: 257
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -755,7 +755,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_31
+      name: Leafbug_MoveUp_6
       rect:
         serializedVersion: 2
         x: 320
@@ -763,7 +763,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -776,7 +776,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_32
+      name: Leafbug_MoveUp_7
       rect:
         serializedVersion: 2
         x: 384
@@ -784,7 +784,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -797,7 +797,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_33
+      name: Leafbug_MoveUp_8
       rect:
         serializedVersion: 2
         x: 448
@@ -805,7 +805,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -818,7 +818,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_34
+      name: Leafbug_MoveSide_1
       rect:
         serializedVersion: 2
         x: 0
@@ -826,7 +826,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -839,7 +839,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_35
+      name: Leafbug_MoveSide_2
       rect:
         serializedVersion: 2
         x: 64
@@ -847,7 +847,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -860,7 +860,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_36
+      name: Leafbug_MoveSide_3
       rect:
         serializedVersion: 2
         x: 128
@@ -868,7 +868,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -881,7 +881,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_37
+      name: Leafbug_MoveSide_4
       rect:
         serializedVersion: 2
         x: 192
@@ -889,7 +889,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -902,7 +902,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_38
+      name: Leafbug_MoveSide_5
       rect:
         serializedVersion: 2
         x: 256
@@ -910,7 +910,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -923,7 +923,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_39
+      name: Leafbug_MoveSide_6
       rect:
         serializedVersion: 2
         x: 320
@@ -931,7 +931,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -944,7 +944,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_40
+      name: Leafbug_MoveSide_7
       rect:
         serializedVersion: 2
         x: 384
@@ -952,7 +952,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -965,7 +965,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_41
+      name: Leafbug_MoveSide_8
       rect:
         serializedVersion: 2
         x: 448
@@ -973,7 +973,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -986,7 +986,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_42
+      name: Leafbug_DieDown_1
       rect:
         serializedVersion: 2
         x: 0
@@ -994,7 +994,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1007,7 +1007,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_43
+      name: Leafbug_DieDown_2
       rect:
         serializedVersion: 2
         x: 64
@@ -1015,7 +1015,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1028,7 +1028,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_44
+      name: Leafbug_DieDown_3
       rect:
         serializedVersion: 2
         x: 128
@@ -1036,7 +1036,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1049,7 +1049,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_45
+      name: Leafbug_DieDown_4
       rect:
         serializedVersion: 2
         x: 192
@@ -1057,7 +1057,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1070,7 +1070,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_46
+      name: Leafbug_DieDown_5
       rect:
         serializedVersion: 2
         x: 256
@@ -1078,7 +1078,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1091,7 +1091,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_47
+      name: Leafbug_DieDown_6
       rect:
         serializedVersion: 2
         x: 320
@@ -1099,7 +1099,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1112,7 +1112,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_48
+      name: Leafbug_DieDown_7
       rect:
         serializedVersion: 2
         x: 384
@@ -1120,7 +1120,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1133,7 +1133,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_49
+      name: Leafbug_DieUp_1
       rect:
         serializedVersion: 2
         x: 0
@@ -1141,7 +1141,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1154,7 +1154,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_50
+      name: Leafbug_DieUp_2
       rect:
         serializedVersion: 2
         x: 64
@@ -1162,7 +1162,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1175,7 +1175,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_51
+      name: Leafbug_DieUp_3
       rect:
         serializedVersion: 2
         x: 128
@@ -1183,7 +1183,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1196,7 +1196,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_52
+      name: Leafbug_DieUp_4
       rect:
         serializedVersion: 2
         x: 192
@@ -1204,7 +1204,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1217,7 +1217,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_53
+      name: Leafbug_DieUp_5
       rect:
         serializedVersion: 2
         x: 256
@@ -1225,7 +1225,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1238,7 +1238,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_54
+      name: Leafbug_DieUp_6
       rect:
         serializedVersion: 2
         x: 320
@@ -1246,7 +1246,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1259,7 +1259,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_55
+      name: Leafbug_DieUp_7
       rect:
         serializedVersion: 2
         x: 384
@@ -1267,7 +1267,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1280,7 +1280,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_56
+      name: Leafbug_DieSide_1
       rect:
         serializedVersion: 2
         x: 0
@@ -1288,7 +1288,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1301,7 +1301,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_57
+      name: Leafbug_DieSide_2
       rect:
         serializedVersion: 2
         x: 64
@@ -1309,7 +1309,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1322,7 +1322,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_58
+      name: Leafbug_DieSide_3
       rect:
         serializedVersion: 2
         x: 128
@@ -1330,7 +1330,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1343,7 +1343,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_59
+      name: Leafbug_DieSide_4
       rect:
         serializedVersion: 2
         x: 192
@@ -1351,7 +1351,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1364,7 +1364,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_60
+      name: Leafbug_DieSide_5
       rect:
         serializedVersion: 2
         x: 256
@@ -1372,7 +1372,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1385,7 +1385,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_61
+      name: Leafbug_DieSide_6
       rect:
         serializedVersion: 2
         x: 320
@@ -1393,7 +1393,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1406,7 +1406,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leafbug_62
+      name: Leafbug_DieSide_7
       rect:
         serializedVersion: 2
         x: 384
@@ -1414,7 +1414,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1437,69 +1437,69 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Leafbug_13: 1831036111
-      Leafbug_50: 1869038670
-      Leafbug_47: -367808237
-      Leafbug_40: -782344100
-      Leafbug_4: -66718576
-      Leafbug_58: -207964544
-      Leafbug_0: 1166619468
-      Leafbug_9: -1710137154
-      Leafbug_3: 98751982
-      Leafbug_27: 1260433679
-      Leafbug_55: -729409795
-      Leafbug_37: -996247738
-      Leafbug_7: 582980597
-      Leafbug_11: 1323011181
-      Leafbug_33: -1499959949
-      Leafbug_56: -985960458
-      Leafbug_28: -1321847311
-      Leafbug_6: -2033858520
-      Leafbug_2: 1942004831
-      Leafbug_23: -814979401
-      Leafbug_22: -1142671709
-      Leafbug_52: 26207227
-      Leafbug_24: 470045734
-      Leafbug_5: 1088149269
-      Leafbug_32: -39559353
-      Leafbug_59: -1249654763
-      Leafbug_17: 1603986104
-      Leafbug_35: -1130331326
-      Leafbug_12: -1937957408
-      Leafbug_54: -2086802094
-      Leafbug_49: 500232231
-      Leafbug_1: -1918111464
-      Leafbug_61: -147599959
-      Leafbug_16: -496102686
-      Leafbug_42: 646289399
-      Leafbug_62: 2023863576
-      Leafbug_41: 1075071803
-      Leafbug_10: 162846185
-      Leafbug_15: 749770808
-      Leafbug_60: -24476084
-      Leafbug_39: 1265305530
-      Leafbug_18: -8894820
-      Leafbug_57: -2071374299
-      Leafbug_21: 580563367
-      Leafbug_29: 56285605
-      Leafbug_14: -804435051
-      Leafbug_31: 2097364405
-      Leafbug_45: -259881039
-      Leafbug_44: 1680870784
-      Leafbug_19: -353570410
-      Leafbug_8: 454944595
-      Leafbug_38: 1694996657
-      Leafbug_20: -1116125671
-      Leafbug_43: 3256807
-      Leafbug_48: -213861204
-      Leafbug_53: -778135435
-      Leafbug_26: 478594842
-      Leafbug_34: -1237786746
-      Leafbug_46: 1921269156
-      Leafbug_51: -1149754964
-      Leafbug_36: -1473655138
-      Leafbug_25: 1020463261
-      Leafbug_30: -332338601
+      Leafbug_DieSide_3: -207964544
+      Leafbug_DieSide_2: -2071374299
+      Leafbug_IddleDown_3: 1942004831
+      Leafbug_MoveUp_8: -1499959949
+      Leafbug_MoveUp_1: 478594842
+      Leafbug_DieUp_2: 1869038670
+      Leafbug_MoveSide_1: -1237786746
+      Leafbug_MoveUp_2: 1260433679
+      Leafbug_DieDown_1: 646289399
+      Leafbug_MoveUp_3: -1321847311
+      Leafbug_IddleDown_5: -66718576
+      Leafbug_IddleUp_2: 582980597
+      Leafbug_IddleUp_4: -1710137154
+      Leafbug_IddleSide_5: -496102686
+      Leafbug_IddleDown_2: -1918111464
+      Leafbug_MoveSide_4: -996247738
+      Leafbug_MoveSide_8: 1075071803
+      Leafbug_IddleUp_5: 162846185
+      Leafbug_MoveDown_4: 580563367
+      Leafbug_MoveDown_6: -814979401
+      Leafbug_DieUp_4: 26207227
+      Leafbug_IddleSide_6: 1603986104
+      Leafbug_IddleDown_4: 98751982
+      Leafbug_MoveSide_7: -782344100
+      Leafbug_MoveDown_1: -8894820
+      Leafbug_IddleSide_3: -804435051
+      Leafbug_MoveSide_6: 1265305530
+      Leafbug_IddleUp_1: -2033858520
+      Leafbug_MoveDown_3: -1116125671
+      Leafbug_DieDown_2: 3256807
+      Leafbug_MoveDown_5: -1142671709
+      Leafbug_MoveDown_7: 470045734
+      Leafbug_MoveUp_4: 56285605
+      Leafbug_MoveDown_8: 1020463261
+      Leafbug_DieUp_3: -1149754964
+      Leafbug_MoveSide_2: -1130331326
+      Leafbug_MoveSide_3: -1473655138
+      Leafbug_DieDown_3: 1680870784
+      Leafbug_IddleSide_2: 1831036111
+      Leafbug_MoveDown_2: -353570410
+      Leafbug_DieUp_5: -778135435
+      Leafbug_DieUp_6: -2086802094
+      Leafbug_DieSide_1: -985960458
+      Leafbug_IddleDown_6: 1088149269
+      Leafbug_IddleUp_6: 1323011181
+      Leafbug_IddleSide_4: 749770808
+      Leafbug_DieDown_4: -259881039
+      Leafbug_IddleUp_3: 454944595
+      Leafbug_DieDown_7: -213861204
+      Leafbug_DieUp_7: -729409795
+      Leafbug_IddleDown_1: 1166619468
+      Leafbug_DieDown_6: -367808237
+      Leafbug_IddleSide_1: -1937957408
+      Leafbug_MoveUp_7: -39559353
+      Leafbug_DieSide_4: -1249654763
+      Leafbug_DieUp_1: 500232231
+      Leafbug_DieSide_7: 2023863576
+      Leafbug_MoveUp_6: 2097364405
+      Leafbug_DieDown_5: 1921269156
+      Leafbug_DieSide_5: -24476084
+      Leafbug_DieSide_6: -147599959
+      Leafbug_MoveUp_5: -332338601
+      Leafbug_MoveSide_5: 1694996657
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

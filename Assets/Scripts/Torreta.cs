@@ -1,4 +1,5 @@
 using UnityEngine;
+using Pathfinding;
 
 public class Torreta : MonoBehaviour
 {
@@ -9,9 +10,12 @@ public class Torreta : MonoBehaviour
     public float rangoTorreta = 2.25f; //Rango efectivo de la torreta
     public float velAtaque = 1f; //A mas alto mas rapido atacara
     public float ajusteRotacion = 90; // 
+    public float vida = 4f;
+    public int coste = 100;
     private float cuentaAtrasDisparo = 1f; //El valor inicial determina cuanto tardara en atacar la torreta una vez haya sido colocada
     [HideInInspector] public bool colocada = false;
     
+    private SpriteRenderer colorTorreta;
 
     [Header("Unity Setups")]
 
@@ -22,6 +26,7 @@ public class Torreta : MonoBehaviour
 
     public GameObject balaPrefab; //Que proyectil disparara la torreta
     private BuildingManager construccionManager; //Clase encargada de la construccion de la torreta en el mundo
+    private SpriteRenderer[] sprite;
     public Transform puntoDisparo; //Desde donde se generara el proyectil
 
     [Header("Animaciones")]
@@ -30,45 +35,57 @@ public class Torreta : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("actualizarObjetivo", 0f, 0.25f);
-        construccionManager = FindObjectOfType<BuildingManager>();
+        InvokeRepeating("actualizarObjetivo", 0f, 0.25f); //Cada 0.25 segundos la torreta busca un objetivo nuevo
+        construccionManager = FindObjectOfType<BuildingManager>();//Tambien inicializa el componente encargado de ver si la torreta se encuentra en un lugar adecuado 
+
+        sprite = GetComponentsInChildren<SpriteRenderer>();
+        cambiarColor(sprite, new Color(0f, 255f, 0f, 190f));
+
     }
 
-    void actualizarObjetivo()
+    void actualizarObjetivo() 
     {
-        GameObject[] enemigos = GameObject.FindGameObjectsWithTag(tagEnemigos);
-        float distanciaCorta = Mathf.Infinity;
-        GameObject enemigoCercano = null;
+        GameObject[] enemigos = GameObject.FindGameObjectsWithTag(tagEnemigos); //La torreta busca todos los objetos con la tag "enemigo"
+        float distanciaCorta = Mathf.Infinity; //En un inicio no hay distancia mas corta asi que es infinita
+        GameObject enemigoCercano = null; //Tampoco hay un enemigo mas cercado
 
-        foreach (GameObject enemigo in enemigos)
+        foreach (GameObject enemigo in enemigos) //Por cada enemigo que hay en el mapa
         {
-            float distanciaEnemigo = Vector2.Distance(transform.position, enemigo.transform.position);
-            if (distanciaEnemigo < distanciaCorta)
+            float distanciaEnemigo = Vector2.Distance(transform.position, enemigo.transform.position); //Toma su posicion
+            if (distanciaEnemigo < distanciaCorta) //Y saca el enemigo mas cercano
             {
                 distanciaCorta = distanciaEnemigo;
                 enemigoCercano = enemigo;
             }
         }
 
-        if (enemigoCercano != null && distanciaCorta <= rangoTorreta)
+        if (enemigoCercano != null && distanciaCorta <= rangoTorreta) //Si dicho enemigo se encuentra en el rango de la torreta
         {
-            objetivo = enemigoCercano.transform;
+            objetivo = enemigoCercano.transform; //Pasara a ser su objetivo
         }
         else
         {
-            objetivo = null;
+            objetivo = null; //en caso contrario ya no lo sera mas
         }
 
     }
    
     void Update()
     {
-        if (colocada == false)
+        if (colocada == false) //Si no esta colocada no queremos que haga nada
             return;
 
+        cambiarColor(sprite, new Color(255f, 255f, 255f, 255f));
         cuentaAtrasDisparo -= Time.deltaTime; //Aunque la torreta no este fijando un objetivo, su contador de ataque sigue avanzando, esto le permite tener un ataque listo para cuando un enemigo entre en rango
 
-        if (objetivo == null)
+        if (vida <= 0)
+        {
+            destruir();
+            return;
+        }
+          
+
+        if (objetivo == null) //Si no hay objetivo no hace falta que rote ni dispare
             return;
 
         Vector3 direccion = objetivo.position - transform.position;
@@ -78,11 +95,10 @@ public class Torreta : MonoBehaviour
         //Quaternion rotacion = Quaternion.Lerp(aRotar.rotation, rotacionMira, Time.deltaTime * velRotacion);
         aRotar.rotation = rotacionMira; 
 
-        if (cuentaAtrasDisparo <= 0)
+        if (cuentaAtrasDisparo <= 0) //Cuando llegue la cuenta atras a 0 la torreta disparara
         {
-            Disparar();
-            cuentaAtrasDisparo = 1 / velAtaque;
-            
+            //Disparar();
+            cuentaAtrasDisparo = 1 / velAtaque; //Y reseteamos la cuenta atras, esto es menor que al inicio, pero asi queda como un tiempo en el cual la torreta tiene que "prepararse" para dispararw
         }
 
         
@@ -96,28 +112,53 @@ public class Torreta : MonoBehaviour
 
     void Disparar()
     {
-        animacion.SetTrigger("Disparar");
-        GameObject balaGO = Instantiate(balaPrefab, puntoDisparo.position, puntoDisparo.rotation);
-        Bala bala = balaGO.GetComponent<Bala>();
+        animacion.SetTrigger("Disparar"); //Al disparar se ejecuta la animacion
+        GameObject balaGO = Instantiate(balaPrefab, puntoDisparo.position, puntoDisparo.rotation); //Se instancia un proyectil que esta apuntando al objetivo
+        Bala bala = balaGO.GetComponent<Bala>(); //Guardamos el componente en una variable
 
-        if (bala != null)
+        if (bala != null) //Para luego darle un objetivo
         {
             bala.buscarObjetivo(objetivo);
         }
     }
 
-    void OnCollisionStay2D(Collision2D col)
-    { //Esto puede reventar violentamente el rendimiento, si ocurre, cambiar por OnCollisionEnter, pero puede dar problemas
-        if (col.gameObject.layer == 7 || col.gameObject.layer == 6)
+    void cambiarColor(SpriteRenderer[] sprites,Color color)
+    {
+        foreach (SpriteRenderer hijos in sprites)
         {
-            construccionManager.setPuedeCons(false);
+            hijos.color = color;
         }
     }
-    void OnCollisionExit2D(Collision2D col)
+
+    public void recibirDaño(float daño)
     {
-        if (col.gameObject.layer == 7 || col.gameObject.layer == 6)
+        vida -= daño;
+        Debug.Log(vida);
+    }
+
+    public void destruir()
+    {
+        Destroy(gameObject);
+    }
+
+    void OnTriggerStay2D(Collider2D col) //En caso de que colisione (y siga haciendolo) con un lugar en el que no se puede construir (osease, esta encima) se lo comunicara al building manager
+                                               //de manera que no permitira construir la torreta
+    { //Esto puede reventar violentamente el rendimiento, si ocurre, cambiar por OnCollisionEnter, pero puede dar problemas
+
+        if (col.gameObject.layer == 7 || col.gameObject.layer == 6 || col.gameObject.layer == 8)
+        {
+            construccionManager.setPuedeCons(false);
+            cambiarColor(sprite, new Color (255f, 0f, 0f, 190f));
+
+        }
+    }
+    void OnTriggerExit2D(Collider2D col) //En caso de salir de las zonas prohibidas la opcion de poder construir vuelve a estar disponible
+    {
+        if (col.gameObject.layer == 7 || col.gameObject.layer == 6 || col.gameObject.layer == 8)
         {
             construccionManager.setPuedeCons(true);
+            cambiarColor(sprite, new Color(0f, 255f, 0f, 190f));
         } 
     }
+
 }
