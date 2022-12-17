@@ -4852,6 +4852,7 @@ GameObject:
   - component: {fileID: 1109431236}
   - component: {fileID: 1109431238}
   - component: {fileID: 1109431239}
+  - component: {fileID: 1109431240}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -4876,7 +4877,7 @@ MonoBehaviour:
   - {fileID: 903812145}
   - {fileID: 530619600}
   tiempoOleadas: 5
-  numeroOleadasTotal: 1
+  numeroOleadasTotal: 5
   tiempoOleadaTXT: {fileID: 389331025}
   indexOleadaTXT: {fileID: 1713701637}
 --- !u!4 &1109431237
@@ -4923,6 +4924,102 @@ MonoBehaviour:
   UI_Pausa: {fileID: 2070289684}
   UI_GameOver: {fileID: 673088668}
   UI_Victoria: {fileID: 369783016}
+--- !u!82 &1109431240
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109431235}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b4880d16c4bed574a80f4a38a5d4e8a2, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1274191273
 GameObject:
   m_ObjectHideFlags: 0
@@ -13379,7 +13476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIewp/W8nawIAACEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1zmzAQ/SsenesM4GQcemsdx+khiSduJhcuG7QYjYXESCK2k/F/70qAoQ4XxNt9u28/xBcTytaYO21WRvBHzZH9nDB/Zj8mg/EBD7DVaiM+sfd5E9yV3gmCzws4oQmPPc3qCp0R+S+1ld45IrBRotCmWvItLrR1luACpEUyGe08WxH0NWEHek1TTznSKZn70yed0mhyomOOyqEZXHvHaXSVXKf03N7GHaMlNCqXUNXIvfqBl8w7YjwPborq6jw8P9dSCtuJYu5Yh6IXUNuGSiIHLoCKDEqiq5SAEsW2dD7ymP5cFBZdp9PA8U4Y6lYbl/3WbQsrsLtW2QfIJkiIkusgq436+M1hGgdzYXT10CeOI5/ElSLfvcAxB+tGTR7Dd4P2OHRoD3IH7xLfSlRPemV0ozgZnWk8tbGY3A2f59oWJea7AW+l9mCft6m/z6ofqS/iFOo/LKSo3kMvr1tgI3XoedgENDSdP6Q47IntQhDqZbxa/Avb8UJ1hnthrCNTV6by+t51Y7wrW4am+XIat9BGYYC7UmpUIN1xTWHc5RAvbKO0F5Z78FenS97Z+htxQQnw4B9FF6a13p+nZUu9f0RbPjdOCoWDaG94oj4ttFLtjo170tM2jSkgH9G2jeD/7xZLZgkUCdwkc4DZLC+mszlPb+J0Nktv51DwmIXlE4rqBLluhXbtoampIbiiRev/KJOVgTrsOzewX4nPSo9aLlShN7lBVM9thLNwNJSEbiZfckEN2qBzQoV5s6+MSZ3vkGfnQFmodHlwBrIhSsZq8aGdRzK2CL+QjHn4vMxrgx8C9z55H+zETv8AUEsDBBQAAAgIAAAIIewFdZ6/bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSkbFRYppRoqmReWKisXFymq6xeYqlqaGlsbGlhXliWoqhUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIewp/W8nawIAACEFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIewFdZ6/bQAAAHgAAAAJACQAAAAAAAAAAAAAALgCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAcAMAAAAA
+    dataString: UEsDBBQAAAgIAAAIIex0oFHkYgIAABcFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzqVjm2QovbUOIT0kYUIzufiyWGusQZY8khwgGf57V7KNXXJieft29+2H/MmEsjXmTpuVEfxRc2Q/J8zb7NtkcD7gEXZabcQH9pw3wV3pSRA4L+CEJjz2YVZX6IzIf6md9OSIwEaJQptqyXeYausswQVIi+Qy2vloRdDnhB3pZ7rwISeykrm3PshaRJMzmTkqh2ag9sRp3PFaWqNyCVWN3Gse2Mm8o8fzQFPUTcfw8bmWUthOCnOnOrSaQm0baoQIXAC1FupH3xcElCh2pfOZx+HPRWHRdeoMnO6EoRm1edlv3Q6uArtvlb2DbIKEKLkJstqsj18I0zi4C6Orh75wHPkirhT5/gVOOVg3Gu0Yvhu0x2FCB5B72Ep8K1E96ZXRjeLkdKbxoY3F5G74e+ktLTHfD3grtQf7uk39dUP9In0T59D/MZWi2oZZ3rTARuow87B/NLSdP6Q4XIftUhDqZbxa/Au78Rl1jnthrCNX16by+ra6MZ7KlmFovp3GpdooDHDXSo0KpDutKY27XuKVb1T2ynMP/sF0xTtf/w6uQgI88KPoyrXWh8u2bKkPj2jL58ZJoXAQ7R1PNKdUK9Xe2HgmfdimMQXko7BdI/j/t8WSWQJFArfJHGA2y4vpbM4Xt/FiNlv8mEPBYxaOTyjqE+S6FdqNh7amhuSKDq3/jkxWBupw79zAYSU+Kj0auVCF3uQGUT23GS7C0VARepl8yQUNaIPOCRX2zT4zJnW+R55dEmWh0+XRGciGLBmrxbt2HslYGj4cGfPw5ZjXBt8FHnzxPtmZnf8BUEsDBBQAAAgIAAAIIewFdZ6/bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSkbFRYppRoqmReWKisXFymq6xeYqlqaGlsbGlhXliWoqhUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIex0oFHkYgIAABcFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIewFdZ6/bQAAAHgAAAAJACQAAAAAAAAAAAAAAK8CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAZwMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 

@@ -423,6 +423,7 @@ MonoBehaviour:
   animator: {fileID: 3843025913328116510}
   aiPath: {fileID: -3138011941094296591}
   barraVida: {fileID: 292553847}
+  sonidoMuerte: {fileID: 8300000, guid: 79ea094137386ed458fa2cb4daa3f0b1, type: 3}
 --- !u!114 &4417224498928408761
 MonoBehaviour:
   m_ObjectHideFlags: 0

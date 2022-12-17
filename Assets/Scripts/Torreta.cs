@@ -22,7 +22,7 @@ public class Torreta : MonoBehaviour
     [Header("Unity Setups")]
 
     public string tagEnemigos = "Enemigo"; //A que puede apuntar la torreta
-
+    public AudioClip sonidoDisparo;
     public Transform aRotar; //Que parte de la torreta rota
     //public float velRotacion = 5f; desmarcar esto si se quiere que la torreta rote de manera mas natural
 
@@ -126,6 +126,8 @@ public class Torreta : MonoBehaviour
         animacion.SetTrigger("Disparar"); //Al disparar se ejecuta la animacion
         GameObject balaGO = Instantiate(balaPrefab, puntoDisparo.position, puntoDisparo.rotation); //Se instancia un proyectil que esta apuntando al objetivo
         Bala bala = balaGO.GetComponent<Bala>(); //Guardamos el componente en una variable
+
+        AudioSource.PlayClipAtPoint(sonidoDisparo, transform.position);
 
         if (bala != null) //Para luego darle un objetivo
         {

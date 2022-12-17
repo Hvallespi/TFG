@@ -241,6 +241,7 @@ MonoBehaviour:
   barraVida: {fileID: 3569901204681144756}
   colocada: 0
   tagEnemigos: Enemigo
+  sonidoDisparo: {fileID: 8300000, guid: 571bd2c4616bc0340a628cd17588394a, type: 3}
   aRotar: {fileID: 6344928369798399009}
   hitboxJug: {fileID: 6261068360310525015}
   balaPrefab: {fileID: 6438505126373917981, guid: 60a60ebd127b10f44b520690b04dce97, type: 3}
