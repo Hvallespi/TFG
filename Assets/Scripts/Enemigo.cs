@@ -90,6 +90,15 @@ public class Enemigo : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D col) //Si llegan a tocar al jugador se declara el fin del juego
+    {
+        if (col.gameObject.layer == 9 && muerto == false)
+        {
+            Menu_Ingame.vivo = false;
+            Destroy(gameObject);
+        }
+    }
+
     void Atacar(Transform objetivo)
     {
         objetivo.GetComponent<Torreta>().recibirDaño(daño);

@@ -154,7 +154,7 @@ public class Torreta : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col) //En caso de que colisione (y siga haciendolo) con un lugar en el que no se puede construir (osease, esta encima) se lo comunicara al building manager
                                                //de manera que no permitira construir la torreta
-    { //Esto puede reventar violentamente el rendimiento, si ocurre, cambiar por OnCollisionEnter, pero puede dar problemas
+    { //Esto puede reventar violentamente el rendimiento, si ocurre, cambiar por OnTriggerEnter, pero puede dar problemas
 
         switch (col.gameObject.layer)
         {

@@ -8,7 +8,6 @@ public class Menu_principal : MonoBehaviour
    public void empezarPartida()
     {
         SceneManager.LoadScene(nivelCargar);
-        Time.timeScale = 1f;
     }
 
     public void salirJuego()

@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc037e4ccfa53a45b115e9a7b4f67c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangoTorreta: 2.25
+  rangoTorreta: 3.25
   velAtaque: 1.2
   ajusteRotacion: 0
   vidaInicial: 4
