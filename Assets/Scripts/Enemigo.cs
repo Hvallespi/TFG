@@ -1,24 +1,32 @@
 using UnityEngine;
+using UnityEngine.UI;
 using Pathfinding;
 
 public class Enemigo : MonoBehaviour
 {
-
+    [Header("Atributos")]
     public float velocidad = 2f;
-    public float vida = 10f;
+    public float vidaInicial = 10f;
+    private float vida;
     public float daño = 1f;
     public float velAtaque = 0.5f;
     public int recompensa = 25;
 
-    private float cuentaAtrasAtaque = 1f;
-
+    [Header("Animaciones")]
     public Animator animator;
+
+    [Header("Unity Setups")]
     public AIPath aiPath;
+    public Image barraVida;
+
+    private float cuentaAtrasAtaque = 1f;
     private bool muerto = false;
 
     void Start()
     {
+        vida = vidaInicial;
         gameObject.GetComponent<AIDestinationSetter>().target = GameObject.FindWithTag("Player").transform;
+        
     }
 
     void Update()
@@ -31,7 +39,7 @@ public class Enemigo : MonoBehaviour
         }
 
         animator.SetFloat("Horizontal", Mathf.Clamp(aiPath.desiredVelocity.x,-1, 1));
-        animator.SetFloat("Vertical", Mathf.Clamp(aiPath.desiredVelocity.y, -1, 1));
+        animator.SetFloat("Vertical", Mathf.Clamp(aiPath.desiredVelocity.y, -1, 1)); 
 
     }
 
@@ -39,6 +47,7 @@ public class Enemigo : MonoBehaviour
     public void recibirDaño(float daño)
     {
         vida -= daño;
+        barraVida.fillAmount = vida / vidaInicial;
     }
 
     void morir()
@@ -55,9 +64,10 @@ public class Enemigo : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (col.gameObject.layer == 6 && col.GetComponent<Torreta>().colocada == true)
+        if (col.gameObject.layer == 6 && col.GetComponent<Torreta>().colocada == true && muerto == false)
         {
             aiPath.canMove = false;
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             cuentaAtrasAtaque -= Time.deltaTime;
             if (cuentaAtrasAtaque <= 0)
             {
@@ -66,15 +76,16 @@ public class Enemigo : MonoBehaviour
                 cuentaAtrasAtaque = 1 / velAtaque;
                 
             }
-
+            
         }
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.layer == 6)
+        if (col.gameObject.layer == 6 && muerto == false)
         {
             aiPath.canMove = true;
+            cuentaAtrasAtaque = 1f;
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         }
     }

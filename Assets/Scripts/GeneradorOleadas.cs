@@ -4,7 +4,7 @@ using System.Collections;
 public class GeneradorOleadas : MonoBehaviour
 {
     public Transform enemigoPrefab;
-    public Transform spawn;
+    public Transform [] spawners;
 
     public float tiempoOleadas = 5f;
     private float cuentaAtras = 2f;
@@ -16,8 +16,7 @@ public class GeneradorOleadas : MonoBehaviour
         if (cuentaAtras <=0f)
         {
             StartCoroutine(generarOleada());
-            //cuentaAtras = tiempoOleadas;
-            cuentaAtras = 5000f;
+            cuentaAtras = tiempoOleadas;
         }
 
         cuentaAtras -= Time.deltaTime;
@@ -28,14 +27,19 @@ public class GeneradorOleadas : MonoBehaviour
     {
         indexOleada++;
 
-        for (int i = 0; i < indexOleada; i++)
+        foreach (var spawn in spawners)
         {
-            generarEnemigo();
-            yield return new WaitForSeconds(0.4f);
+            Debug.Log("JOSEPUTO");
+            for (int i = 0; i < indexOleada; i++)
+            {
+                generarEnemigo(spawn);
+                yield return new WaitForSeconds(0.4f);
+            }
         }
+
     }
 
-    void generarEnemigo()
+    void generarEnemigo(Transform spawn)
     {
         Instantiate(enemigoPrefab, spawn.position, spawn.rotation);
     }

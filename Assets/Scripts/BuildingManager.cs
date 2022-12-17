@@ -5,10 +5,18 @@ using UnityEngine.UI;
 public class BuildingManager : MonoBehaviour
 {
 
+    public Texture2D[] cursores;
+
+   
     public GameObject[] construcciones; //Array que contendra todos los tipos de torreta
+
+    private GameObject uiTienda;
+    private Button[] botones;
+
     private GameObject objetoPendiente; //Objeto que se va a construir
     private Torreta construccion; // Objeto de la clase torreta para operar con el
     private bool puedeConstruir = true; //Por defecto se asume que si se puede construir la torreta
+    private bool modoDestruir = false;
 
     private Vector3 pos;
 
@@ -19,23 +27,89 @@ public class BuildingManager : MonoBehaviour
         this.puedeConstruir = puedeConstruir;
     }
 
+    private void Start()
+    {
+        Cursor.SetCursor(cursores[0], Vector2.zero, CursorMode.Auto);
+        uiTienda = GameObject.FindGameObjectWithTag("UI_Ingame");
+        botones = uiTienda.GetComponentsInChildren<Button>();
+    }
+
     void Update()
     {
+
+        actualizarBotones();
+
+        if (modoDestruir == true)
+        {
+            if (Input.GetMouseButtonDown(0) && Time.timeScale != 0)
+            {
+                RaycastHit2D impacto = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+
+                if (impacto.collider != null)
+                {
+                    if (impacto.collider.tag == "Construcciones")
+                    {
+                        EstadisticasJugador.dinero += (int)(impacto.transform.gameObject.GetComponent<Torreta>().coste * 0.65); //Al destruir se devuelve un 65% del precio original
+                        Destroy(impacto.transform.gameObject);
+                    };
+                }
+
+                
+            }
+        }
+
         if (objetoPendiente != null) //Nada de esto ocurre si no hay un objeto para construir, asi se ahorra memoria
         {
             objetoPendiente.transform.position = new Vector2( //Se ajusta la posicion de la torreta a la cuadricula
                 redondearCuadricula(pos.x),
                 redondearCuadricula(pos.y));
 
-            if (Input.GetMouseButtonDown(0) && puedeConstruir) // Si el lugar de construccion es apto, al hacer click se pondra la torreta
+            if (Input.GetMouseButtonDown(0) && puedeConstruir && Time.timeScale != 0) // Si el lugar de construccion es apto, al hacer click se pondra la torreta
             {
                colocarObjeto();
             }
 
-            if (Input.GetMouseButtonDown(1)) //La accion de construir se cancela con un click derecho
+            if (Input.GetMouseButtonDown(1) && Time.timeScale != 0) //La accion de construir se cancela con un click derecho
             {
                cancelarColocar();
             }
+        }
+        else 
+        {
+            if (Input.GetKeyDown("x") && Time.timeScale != 0)
+            {
+                Cursor.SetCursor(cursores[1], Vector2.zero, CursorMode.Auto);
+                modoDestruir = true;
+                uiTienda.GetComponent<CanvasGroup>().interactable = false;
+                uiTienda.GetComponent<CanvasGroup>().alpha = 0;
+                
+            }
+
+            if (Input.GetKeyDown("c") && Time.timeScale != 0)
+            {
+                Cursor.SetCursor(cursores[0], Vector2.zero, CursorMode.Auto);
+                modoDestruir = false;
+                uiTienda.GetComponent<CanvasGroup>().interactable = true;
+                uiTienda.GetComponent<CanvasGroup>().alpha = 1;
+            }
+        }
+
+    }
+
+    private void actualizarBotones()
+    {
+        int iterador = 0;
+        foreach (var boton in botones)
+        {
+            if (EstadisticasJugador.dinero < construcciones[iterador].GetComponent<Torreta>().coste)
+            {
+                boton.interactable = false;
+            }
+            else
+            {
+                boton.interactable = true;
+            }
+            iterador++;
         }
     }
 
@@ -64,18 +138,10 @@ public class BuildingManager : MonoBehaviour
         mousePosition.x -= ajuste;
         mousePosition.y -= ajuste;
         pos = mousePosition;
-
     }
 
     public void seleccionarObjeto(int index)
     {
-
-        if (EstadisticasJugador.dinero < construcciones[index].GetComponent<Torreta>().coste) //Si hay menos dinero disponible del que cuesta la torreta salta un aviso de que no se puede comprar                                                                                //TODO: Mostrar en pantalla y ver si puedo modificar el boton para que no sea pulsable
-        {
-            Debug.Log("No hay suficiente dinero");
-            return;
-        }
-
         objetoPendiente = Instantiate(construcciones[index], pos, transform.rotation);
         construccion = objetoPendiente.GetComponent<Torreta>();
         construccion.colocada = false;

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using Pathfinding;
 
 public class Torreta : MonoBehaviour
@@ -10,36 +11,41 @@ public class Torreta : MonoBehaviour
     public float rangoTorreta = 2.25f; //Rango efectivo de la torreta
     public float velAtaque = 1f; //A mas alto mas rapido atacara
     public float ajusteRotacion = 90; // 
-    public float vida = 4f;
+    public float vidaInicial = 4f;
+    private float vida;
     public int coste = 100;
+    public bool puedeAtacar = true;
     private float cuentaAtrasDisparo = 1f; //El valor inicial determina cuanto tardara en atacar la torreta una vez haya sido colocada
+    public Image barraVida;
     [HideInInspector] public bool colocada = false;
-    
-    private SpriteRenderer colorTorreta;
 
     [Header("Unity Setups")]
 
     public string tagEnemigos = "Enemigo"; //A que puede apuntar la torreta
 
     public Transform aRotar; //Que parte de la torreta rota
-   // public float velRotacion = 5f; desmarcar esto si se quiere que la torreta rote de manera mas natural
+    //public float velRotacion = 5f; desmarcar esto si se quiere que la torreta rote de manera mas natural
 
+    public BoxCollider2D hitboxJug;
     public GameObject balaPrefab; //Que proyectil disparara la torreta
     private BuildingManager construccionManager; //Clase encargada de la construccion de la torreta en el mundo
-    private SpriteRenderer[] sprite;
+    private SpriteRenderer[] colorTorreta;
     public Transform puntoDisparo; //Desde donde se generara el proyectil
 
     [Header("Animaciones")]
 
     public Animator animacion; // Que animaciones tendra la torreta
 
+
     void Start()
     {
+        vida = vidaInicial;
+
         InvokeRepeating("actualizarObjetivo", 0f, 0.25f); //Cada 0.25 segundos la torreta busca un objetivo nuevo
         construccionManager = FindObjectOfType<BuildingManager>();//Tambien inicializa el componente encargado de ver si la torreta se encuentra en un lugar adecuado 
 
-        sprite = GetComponentsInChildren<SpriteRenderer>();
-        cambiarColor(sprite, new Color(0f, 255f, 0f, 190f));
+        colorTorreta = GetComponentsInChildren<SpriteRenderer>();
+        cambiarColor(colorTorreta, new Color(0f, 255f, 0f, 190f));
 
     }
 
@@ -75,7 +81,9 @@ public class Torreta : MonoBehaviour
         if (colocada == false) //Si no esta colocada no queremos que haga nada
             return;
 
-        cambiarColor(sprite, new Color(255f, 255f, 255f, 255f));
+        hitboxJug.enabled = true;
+        barraVida.fillAmount = vida / vidaInicial;
+        cambiarColor(colorTorreta, new Color(255f, 255f, 255f, 255f));
         cuentaAtrasDisparo -= Time.deltaTime; //Aunque la torreta no este fijando un objetivo, su contador de ataque sigue avanzando, esto le permite tener un ataque listo para cuando un enemigo entre en rango
 
         if (vida <= 0)
@@ -83,7 +91,9 @@ public class Torreta : MonoBehaviour
             destruir();
             return;
         }
-          
+
+        if (puedeAtacar == false)
+            return;
 
         if (objetivo == null) //Si no hay objetivo no hace falta que rote ni dispare
             return;
@@ -97,11 +107,12 @@ public class Torreta : MonoBehaviour
 
         if (cuentaAtrasDisparo <= 0) //Cuando llegue la cuenta atras a 0 la torreta disparara
         {
-            //Disparar();
+            Disparar();
             cuentaAtrasDisparo = 1 / velAtaque; //Y reseteamos la cuenta atras, esto es menor que al inicio, pero asi queda como un tiempo en el cual la torreta tiene que "prepararse" para dispararw
         }
 
-        
+      
+
     }
 
     private void OnDrawGizmosSelected() //No tiene efecto alguno en la jugabilidad, pero en el modo inspector al seleccionar la torreta se puede ver su rango de ataque
@@ -145,20 +156,35 @@ public class Torreta : MonoBehaviour
                                                //de manera que no permitira construir la torreta
     { //Esto puede reventar violentamente el rendimiento, si ocurre, cambiar por OnCollisionEnter, pero puede dar problemas
 
-        if (col.gameObject.layer == 7 || col.gameObject.layer == 6 || col.gameObject.layer == 8)
+        switch (col.gameObject.layer)
         {
-            construccionManager.setPuedeCons(false);
-            cambiarColor(sprite, new Color (255f, 0f, 0f, 190f));
+            case 6:
+            case 7:
+            case 8:
+            case 10:
 
+                if (colocada == false) //El colocada es necesario ya que si no da un bug que hace que cuando un enemigo esta atacando una construccion no se pueden colocar mas
+                {
+                    construccionManager.setPuedeCons(false);
+                    cambiarColor(colorTorreta, new Color(255f, 0f, 0f, 190f));
+                }
+                break;
         }
+
     }
     void OnTriggerExit2D(Collider2D col) //En caso de salir de las zonas prohibidas la opcion de poder construir vuelve a estar disponible
     {
-        if (col.gameObject.layer == 7 || col.gameObject.layer == 6 || col.gameObject.layer == 8)
+
+        switch (col.gameObject.layer)
         {
-            construccionManager.setPuedeCons(true);
-            cambiarColor(sprite, new Color(0f, 255f, 0f, 190f));
-        } 
+            case 6:
+            case 7:
+            case 8:
+            case 10:
+                construccionManager.setPuedeCons(true);
+                cambiarColor(colorTorreta, new Color(0f, 255f, 0f, 190f));
+                break;
+        }
     }
 
 }

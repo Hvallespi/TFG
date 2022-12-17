@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemigo
+  - UI_Ingame
+  - Construcciones
   layers:
   - Default
   - TransparentFX
@@ -15,8 +17,8 @@ TagManager:
   - Torretas
   - NoConstruible
   - Enemigos
-  - 
-  - 
+  - Jugador
+  - NoAtravesable
   - 
   - 
   - 
