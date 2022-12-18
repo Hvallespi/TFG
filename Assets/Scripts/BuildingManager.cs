@@ -1,5 +1,4 @@
 using UnityEngine;
-using Pathfinding;
 using UnityEngine.UI;
 
 public class BuildingManager : MonoBehaviour
@@ -7,7 +6,6 @@ public class BuildingManager : MonoBehaviour
 
     public Texture2D[] cursores;
 
-   
     public GameObject[] construcciones; //Array que contendra todos los tipos de torreta
 
     private GameObject uiTienda;

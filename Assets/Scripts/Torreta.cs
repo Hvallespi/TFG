@@ -82,6 +82,7 @@ public class Torreta : MonoBehaviour
             return;
 
         hitboxJug.enabled = true;
+
         barraVida.fillAmount = vida / vidaInicial;
         cambiarColor(colorTorreta, new Color(255f, 255f, 255f, 255f));
         cuentaAtrasDisparo -= Time.deltaTime; //Aunque la torreta no este fijando un objetivo, su contador de ataque sigue avanzando, esto le permite tener un ataque listo para cuando un enemigo entre en rango

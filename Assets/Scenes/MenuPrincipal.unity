@@ -440,6 +440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nivelCargar: Nivel1
+  cursor: {fileID: 2800000, guid: e138483cd52c78e49893961b4220b010, type: 3}
 --- !u!4 &256931173
 Transform:
   m_ObjectHideFlags: 0

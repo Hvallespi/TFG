@@ -4,8 +4,14 @@ using UnityEngine;
 public class Menu_principal : MonoBehaviour
 {
     public string nivelCargar = "Nivel1";
+    public Texture2D cursor;
 
-   public void empezarPartida()
+    public void Start()
+    {
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+    }
+
+    public void empezarPartida()
     {
         SceneManager.LoadScene(nivelCargar);
     }
