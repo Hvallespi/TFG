@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1941115087715726931}
   - component: {fileID: 5760733647569972277}
-  - component: {fileID: -7115137176938848769}
-  - component: {fileID: 7198432873186709001}
+  - component: {fileID: -2419668636830210617}
+  - component: {fileID: -7604699624873659445}
   m_Layer: 11
-  m_Name: Bala
+  m_Name: Bala_ricochet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-7115137176938848769
+--- !u!114 &-2419668636830210617
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,12 +95,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6438505126373917981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 603b23eb8aa3d30499705d53adc52d62, type: 3}
+  m_Script: {fileID: 11500000, guid: 07581a9e5feefec4ab3fcbc7a864708b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 10
   "da\xF1o": 5
---- !u!70 &7198432873186709001
+  numeroRebotes: 2
+  tagEnemigos: Enemigo
+--- !u!70 &-7604699624873659445
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

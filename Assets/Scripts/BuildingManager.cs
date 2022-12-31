@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BuildingManager : MonoBehaviour
 {
@@ -9,35 +8,35 @@ public class BuildingManager : MonoBehaviour
     public GameObject[] construcciones; //Array que contendra todos los tipos de torreta
 
     private GameObject uiTienda;
-    private Button[] botones;
 
     private GameObject objetoPendiente; //Objeto que se va a construir
-    private Torreta construccion; // Objeto de la clase torreta para operar con el
     private bool puedeConstruir = true; //Por defecto se asume que si se puede construir la torreta
     private bool modoDestruir = false;
 
     private Vector3 pos;
-
-    //[SerializeField] private LayerMask mascaraCapa;
+    private Estructuras estructuraActual;
 
     public void setPuedeCons(bool puedeConstruir) // Setter que se usa en el codigo de la torreta para transmitir si se puede construir o no
     {
         this.puedeConstruir = puedeConstruir;
     }
 
+    public void cambiarConstruccion(Estructuras estructuraActual)
+    {
+        this.estructuraActual = estructuraActual;
+        Debug.Log(this.estructuraActual);
+    }
+
     private void Start()
     {
         Cursor.SetCursor(cursores[0], Vector2.zero, CursorMode.Auto);
         uiTienda = GameObject.FindGameObjectWithTag("UI_Ingame");
-        botones = uiTienda.GetComponentsInChildren<Button>();
     }
 
     void Update()
     {
 
-        actualizarBotones();
-
-        if (modoDestruir == true)
+       if (modoDestruir == true)
         {
             if (Input.GetMouseButtonDown(0) && Time.timeScale != 0)
             {
@@ -47,7 +46,7 @@ public class BuildingManager : MonoBehaviour
                 {
                     if (impacto.collider.tag == "Construcciones")
                     {
-                        EstadisticasJugador.dinero += (int)(impacto.transform.gameObject.GetComponent<Torreta>().coste * 0.65); //Al destruir se devuelve un 65% del precio original
+                        EstadisticasJugador.dinero += (int)(impacto.transform.gameObject.GetComponent<Estructuras>().getCosteTorreta() * 0.65); //Al destruir se devuelve un 65% del precio original
                         Destroy(impacto.transform.gameObject);
                     };
                 }
@@ -91,40 +90,23 @@ public class BuildingManager : MonoBehaviour
                 uiTienda.GetComponent<CanvasGroup>().alpha = 1;
             }
         }
-
-    }
-
-    private void actualizarBotones()
-    {
-        int iterador = 0;
-        foreach (var boton in botones)
-        {
-            if (EstadisticasJugador.dinero < construcciones[iterador].GetComponent<Torreta>().coste)
-            {
-                boton.interactable = false;
-            }
-            else
-            {
-                boton.interactable = true;
-            }
-            iterador++;
-        }
+        
     }
 
     public void colocarObjeto()
     {
-        construccion.colocada = true; //Al estar colocada la torreta ya puede empezar a disparar
+        estructuraActual.setColocada(true); //Al estar colocada la torreta ya puede empezar a disparar
         AstarPath.active.Scan(); //Al colocar el objeto se realiza un analisis del mapa para que el pathfinding la tenga en cuenta a la hora de hacer los calculos
-        EstadisticasJugador.dinero -= construccion.coste; //Se cobra el coste de la torreta
+        EstadisticasJugador.dinero -= estructuraActual.getCosteTorreta(); //Se cobra el coste de la torreta
       
-        construccion = null; // Se limpian las variables para estar listas en el caso de que se coloque una nueva torreta
+        estructuraActual = null; // Se limpian las variables para estar listas en el caso de que se coloque una nueva torreta
         objetoPendiente = null;
     }
 
     public void cancelarColocar()
     {
         Destroy(objetoPendiente);
-        construccion = null;
+        estructuraActual = null;
         objetoPendiente = null;
     }
 
@@ -141,8 +123,6 @@ public class BuildingManager : MonoBehaviour
     public void seleccionarObjeto(int index)
     {
         objetoPendiente = Instantiate(construcciones[index], pos, transform.rotation);
-        construccion = objetoPendiente.GetComponent<Torreta>();
-        construccion.colocada = false;
     }
 
     float redondearCuadricula(float pos)

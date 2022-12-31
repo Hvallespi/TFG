@@ -27,7 +27,7 @@ public class Enemigo : MonoBehaviour
     {
         vida = vidaInicial;
         gameObject.GetComponent<AIDestinationSetter>().target = GameObject.FindWithTag("Player").transform;
-        
+        aiPath.maxSpeed = velocidad;
     }
 
     void Update()
@@ -41,7 +41,6 @@ public class Enemigo : MonoBehaviour
 
         animator.SetFloat("Horizontal", Mathf.Clamp(aiPath.desiredVelocity.x,-1, 1));
         animator.SetFloat("Vertical", Mathf.Clamp(aiPath.desiredVelocity.y, -1, 1)); 
-
     }
 
 
@@ -69,17 +68,15 @@ public class Enemigo : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (col.gameObject.layer == 6 && col.GetComponent<Torreta>().colocada == true && muerto == false)
+        if (col.gameObject.layer == 6 && col.GetComponent<Estructuras>().colocada == true && muerto == false)
         {
             aiPath.canMove = false;
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             cuentaAtrasAtaque -= Time.deltaTime;
             if (cuentaAtrasAtaque <= 0)
             {
-                Debug.Log("atacando");
                 Atacar(col.transform);
-                cuentaAtrasAtaque = 1 / velAtaque;
-                
+                cuentaAtrasAtaque = 1 / velAtaque; 
             }
             
         }
@@ -106,6 +103,6 @@ public class Enemigo : MonoBehaviour
 
     void Atacar(Transform objetivo)
     {
-        objetivo.GetComponent<Torreta>().recibirDaño(daño);
+        objetivo.GetComponent<Estructuras>().recibirDaño(daño);
     }
 }

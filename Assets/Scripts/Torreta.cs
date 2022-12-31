@@ -4,7 +4,9 @@ using Pathfinding;
 
 public class Torreta : MonoBehaviour
 {
-    private Transform objetivo; //El objetivo actual de la torreta
+    private GameObject objetivo; //El objetivo actual de la torreta
+    private BuildingManager construccionManager; //Clase encargada de la construccion de la torreta en el mundo
+    private SpriteRenderer[] colorTorreta;
 
     [Header("Atributos")]
 
@@ -28,14 +30,17 @@ public class Torreta : MonoBehaviour
 
     public BoxCollider2D hitboxJug;
     public GameObject balaPrefab; //Que proyectil disparara la torreta
-    private BuildingManager construccionManager; //Clase encargada de la construccion de la torreta en el mundo
-    private SpriteRenderer[] colorTorreta;
     public Transform puntoDisparo; //Desde donde se generara el proyectil
 
     [Header("Animaciones")]
 
     public Animator animacion; // Que animaciones tendra la torreta
 
+    public void setColocada(bool colocada)
+    {
+        cambiarColor(colorTorreta, new Color(255f, 255f, 255f, 255f));
+        this.colocada = colocada;
+    }
 
     void Start()
     {
@@ -46,7 +51,6 @@ public class Torreta : MonoBehaviour
 
         colorTorreta = GetComponentsInChildren<SpriteRenderer>();
         cambiarColor(colorTorreta, new Color(0f, 255f, 0f, 190f));
-
     }
 
     void actualizarObjetivo() 
@@ -67,7 +71,7 @@ public class Torreta : MonoBehaviour
 
         if (enemigoCercano != null && distanciaCorta <= rangoTorreta) //Si dicho enemigo se encuentra en el rango de la torreta
         {
-            objetivo = enemigoCercano.transform; //Pasara a ser su objetivo
+            objetivo = enemigoCercano; //Pasara a ser su objetivo
         }
         else
         {
@@ -99,7 +103,7 @@ public class Torreta : MonoBehaviour
         if (objetivo == null) //Si no hay objetivo no hace falta que rote ni dispare
             return;
 
-        Vector3 direccion = objetivo.position - transform.position;
+        Vector3 direccion = objetivo.transform.position - transform.position;
         Vector3 vectorDirRotado = Quaternion.Euler(0, 0, ajusteRotacion) * direccion;
         Quaternion rotacionMira = Quaternion.LookRotation(forward:Vector3.forward, upwards:vectorDirRotado); 
         //Descomentar la siguiente linea y ambiar aRotar.rotation = rotacionMira por aRotar.rotation = rotacion para un giro no tan espontaneo, pero las balas a veces saldran raras

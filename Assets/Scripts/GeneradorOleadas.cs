@@ -51,7 +51,6 @@ public class GeneradorOleadas : MonoBehaviour
 
         foreach (var spawn in spawners)
         {
-            Debug.Log("JOSEPUTO");
             for (int i = 0; i < indexOleada; i++)
             {
                 generarEnemigo(spawn);

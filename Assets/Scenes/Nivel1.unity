@@ -408,8 +408,9 @@ GameObject:
   - component: {fileID: 337266580}
   - component: {fileID: 337266579}
   - component: {fileID: 337266578}
+  - component: {fileID: 337266582}
   m_Layer: 5
-  m_Name: Boton_Ballesta (2)
+  m_Name: Boton_Ballesta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -550,6 +551,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337266576}
   m_CullTransparentMesh: 1
+--- !u!114 &337266582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337266576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea95b1491ba8634393aafb79f4a5a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boton: {fileID: 337266579}
+  objetoEnTienda: {fileID: 11400000, guid: de0735c82b97b4f4dbbe1ebb37aeef51, type: 2}
 --- !u!1 &369783016
 GameObject:
   m_ObjectHideFlags: 0
@@ -4563,8 +4578,9 @@ GameObject:
   - component: {fileID: 1077670938}
   - component: {fileID: 1077670937}
   - component: {fileID: 1077670936}
+  - component: {fileID: 1077670940}
   m_Layer: 5
-  m_Name: Boton_Ballesta (1)
+  m_Name: Boton_Muro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4705,6 +4721,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077670934}
   m_CullTransparentMesh: 1
+--- !u!114 &1077670940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077670934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea95b1491ba8634393aafb79f4a5a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boton: {fileID: 1077670937}
+  objetoEnTienda: {fileID: 11400000, guid: 4df7746b57fc6b04390eced2b9c2fbab, type: 2}
 --- !u!1 &1080850262
 GameObject:
   m_ObjectHideFlags: 0
@@ -13476,7 +13506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIex0oFHkYgIAABcFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzqVjm2QovbUOIT0kYUIzufiyWGusQZY8khwgGf57V7KNXXJieft29+2H/MmEsjXmTpuVEfxRc2Q/J8zb7NtkcD7gEXZabcQH9pw3wV3pSRA4L+CEJjz2YVZX6IzIf6md9OSIwEaJQptqyXeYausswQVIi+Qy2vloRdDnhB3pZ7rwISeykrm3PshaRJMzmTkqh2ag9sRp3PFaWqNyCVWN3Gse2Mm8o8fzQFPUTcfw8bmWUthOCnOnOrSaQm0baoQIXAC1FupH3xcElCh2pfOZx+HPRWHRdeoMnO6EoRm1edlv3Q6uArtvlb2DbIKEKLkJstqsj18I0zi4C6Orh75wHPkirhT5/gVOOVg3Gu0Yvhu0x2FCB5B72Ep8K1E96ZXRjeLkdKbxoY3F5G74e+ktLTHfD3grtQf7uk39dUP9In0T59D/MZWi2oZZ3rTARuow87B/NLSdP6Q4XIftUhDqZbxa/Au78Rl1jnthrCNX16by+ra6MZ7KlmFovp3GpdooDHDXSo0KpDutKY27XuKVb1T2ynMP/sF0xTtf/w6uQgI88KPoyrXWh8u2bKkPj2jL58ZJoXAQ7R1PNKdUK9Xe2HgmfdimMQXko7BdI/j/t8WSWQJFArfJHGA2y4vpbM4Xt/FiNlv8mEPBYxaOTyjqE+S6FdqNh7amhuSKDq3/jkxWBupw79zAYSU+Kj0auVCF3uQGUT23GS7C0VARepl8yQUNaIPOCRX2zT4zJnW+R55dEmWh0+XRGciGLBmrxbt2HslYGj4cGfPw5ZjXBt8FHnzxPtmZnf8BUEsDBBQAAAgIAAAIIewFdZ6/bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSkbFRYppRoqmReWKisXFymq6xeYqlqaGlsbGlhXliWoqhUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIex0oFHkYgIAABcFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIewFdZ6/bQAAAHgAAAAJACQAAAAAAAAAAAAAAK8CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAZwMAAAAA
+    dataString: UEsDBBQAAAgIAAAIIewBtXnvcgIAAC8FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMtO4zAU/ZXK6ynKA6ZkdkMpMAugoiA22bj2TWLVsSvboS2o/z7XTtKEUgnVnPs65/i6X0QouwXmtLk3gj9qDuTPhPgz+TUZgg+wp6VWK/EJfc674K7ySTTkvFAnNOKxL7O6BmcE+6tK6ZMjBBslCm3qBS9hrq2zCBdUWsCQ0c5XK4S+JmSPX9PMlxzwlMz86RNPWTQ54pGBcmCG1D5xGl0klxl+rtPfXUVb0Cgmab0F7tkPdUnWFcZZSFOoq8vwGpiWUtiOFHGHbRD9Qg9eMhcUBQYW0cU1AhWIsnK+67j0uSgsuI6joYdbYdCptie50a19NbWbltUHlU0YHyWXgVLb9fFHwjQO4cLo+qEfHEd+iKsE2yBJRq0bGTyGbwfucXBnR+WGriW8V6Ce9L3RjeIYdKbxpY2F5Hb496RtXgHbDHhLtQf7uc325z311+lFHIP+/VyKeh28vGyBldTB77AFYPBm/iHjsCO2a4Gop/Fm4ZWW42XqAnfCWIehTqby/Na6MT6VLIJpXk7j5tooCHAnZQuKSndYYht3folnsdHYs8gd9c+mG97F+tdwVhLgIT+KzkJLvTvdlq307hFs9dw4KRQMpH3gCX2aa6XaHRt70petGlNQNiorG8G/7xZJ0oQWCb1KZpSmKSum6YxnV3GWptn1jBY8JmH5hEKdVC5bop09eGtjTxRuWrBbQS1KbSevYAxYh3+TG2oF0za8JkN39+Kz1qNLEKrQK2YA1PP3nhYMjsV3yhdcoGUrcE6osAHkKydSsw3w/NQoD9oXe2doPnTJyVZ8aOeRnMzDD0pOPHxa76WBDwE7P7xvdiTH/1BLAwQUAAAICAAACCHsBXWev20AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0kpGxUWKaUaKpkXliorFxcpqusXmKpamhpbGxpYV5YlqKoVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHsAbV573ICAAAvBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHsBXWev20AAAB4AAAACQAkAAAAAAAAAAAAAAC/AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHcDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -13597,8 +13627,8 @@ MonoBehaviour:
   - {fileID: 2800000, guid: e138483cd52c78e49893961b4220b010, type: 3}
   - {fileID: 2800000, guid: 1b96cf7b50790ac4da4983a674987863, type: 3}
   construcciones:
-  - {fileID: 6344928370070887793, guid: 3511e33f07fb6a644a6e2c95ba66c16f, type: 3}
-  - {fileID: 3088224401393081573, guid: eb4e8ee8a52d39543ae3764673a39d4b, type: 3}
+  - {fileID: 6806386901799819870, guid: 11f1e3f1dc646204aa72528dc98f2509, type: 3}
+  - {fileID: 3338158552678249461, guid: 191a09df53e6dd1468f1bfd547ffda68, type: 3}
 --- !u!4 &1375810775
 Transform:
   m_ObjectHideFlags: 0
