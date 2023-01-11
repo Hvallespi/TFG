@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a91b68c79bc714aaf706bf069c6f13, type: 3}
   m_Name: Muro
   m_EditorClassIdentifier: 
-  vidaInicial: 6
+  vidaInicial: 10
   coste: 25

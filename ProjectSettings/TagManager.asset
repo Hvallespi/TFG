@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemigo
   - UI_Ingame
+  - Recolectadora
+  - Torretas
   - Construcciones
   layers:
   - Default
@@ -20,7 +22,7 @@ TagManager:
   - Jugador
   - NoAtravesable
   - Proyectil
-  - 
+  - Recursos
   - 
   - 
   - 
@@ -41,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Terreno
+    uniqueID: 3216223517
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

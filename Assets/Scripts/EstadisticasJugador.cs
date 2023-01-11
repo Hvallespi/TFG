@@ -3,19 +3,19 @@ using UnityEngine;
 
 public class EstadisticasJugador : MonoBehaviour
 {
-    public static int dinero;
-    public int dineroInicial = 200;
+    public static int piedra;
+    public int piedraInicial = 200;
 
     public TextMeshProUGUI dineroTexto;
 
     private void Start()
     {
-        dinero = dineroInicial;
+        piedra = piedraInicial;
     }
 
     private void Update()
     {
-        dineroTexto.SetText(dinero.ToString() + " $");
+        dineroTexto.SetText(piedra.ToString());
     }
 
 }

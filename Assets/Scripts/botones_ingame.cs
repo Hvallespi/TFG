@@ -10,7 +10,7 @@ public class botones_ingame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (EstadisticasJugador.dinero < objetoEnTienda.coste)
+        if (EstadisticasJugador.piedra < objetoEnTienda.coste)
         {
             boton.interactable = false;
         }

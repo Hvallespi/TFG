@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 540873e79d1642048895c0d12dad8f70, type: 3}
   m_Name: Ballesta
   m_EditorClassIdentifier: 
-  vidaInicial: 4
-  coste: 500
+  vidaInicial: 5
+  coste: 100
   rangoTorreta: 3.25
   velAtaque: 1.2
   ajusteRotacion: 0

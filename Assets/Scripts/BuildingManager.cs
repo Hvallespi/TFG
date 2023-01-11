@@ -46,7 +46,7 @@ public class BuildingManager : MonoBehaviour
                 {
                     if (impacto.collider.tag == "Construcciones")
                     {
-                        EstadisticasJugador.dinero += (int)(impacto.transform.gameObject.GetComponent<Estructuras>().getCosteTorreta() * 0.65); //Al destruir se devuelve un 65% del precio original
+                        EstadisticasJugador.piedra += (int)(impacto.transform.gameObject.GetComponent<Estructuras>().getCosteTorreta() * 0.65); //Al destruir se devuelve un 65% del precio original
                         Destroy(impacto.transform.gameObject);
                     };
                 }
@@ -96,8 +96,9 @@ public class BuildingManager : MonoBehaviour
     public void colocarObjeto()
     {
         estructuraActual.setColocada(true); //Al estar colocada la torreta ya puede empezar a disparar
+
         AstarPath.active.Scan(); //Al colocar el objeto se realiza un analisis del mapa para que el pathfinding la tenga en cuenta a la hora de hacer los calculos
-        EstadisticasJugador.dinero -= estructuraActual.getCosteTorreta(); //Se cobra el coste de la torreta
+        EstadisticasJugador.piedra -= estructuraActual.getCosteTorreta(); //Se cobra el coste de la torreta
       
         estructuraActual = null; // Se limpian las variables para estar listas en el caso de que se coloque una nueva torreta
         objetoPendiente = null;

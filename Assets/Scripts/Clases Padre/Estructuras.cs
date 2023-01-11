@@ -7,7 +7,7 @@ public class Estructuras : MonoBehaviour
     [Header("Unity Setups Estructuras")]
     public Image barraVida;
     public BoxCollider2D hitboxJug;
-    public bool colocada = false;
+    [HideInInspector]public bool colocada = false;
     protected BuildingManager construccionManager; //Clase encargada de la construccion de la torreta en el mundo
     protected SpriteRenderer[] colorEstructura;
 
@@ -65,7 +65,7 @@ public class Estructuras : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void OnTriggerStay2D(Collider2D col) //En caso de que colisione (y siga haciendolo) con un lugar en el que no se puede construir (osease, esta encima) se lo comunicara al building manager
+    public virtual void OnTriggerStay2D(Collider2D col) //En caso de que colisione (y siga haciendolo) con un lugar en el que no se puede construir (osease, esta encima) se lo comunicara al building manager
                                          //de manera que no permitira construir la torreta
     { //Esto puede reventar violentamente el rendimiento, si ocurre, cambiar por OnTriggerEnter, pero puede dar problemas
 
@@ -75,6 +75,7 @@ public class Estructuras : MonoBehaviour
             case 7:
             case 8:
             case 10:
+            case 12:
 
                 if (colocada == false) //El colocada es necesario ya que si no da un bug que hace que cuando un enemigo esta atacando una construccion no se pueden colocar mas
                 {
@@ -85,7 +86,7 @@ public class Estructuras : MonoBehaviour
         }
 
     }
-    void OnTriggerExit2D(Collider2D col) //En caso de salir de las zonas prohibidas la opcion de poder construir vuelve a estar disponible
+    public virtual void OnTriggerExit2D(Collider2D col) //En caso de salir de las zonas prohibidas la opcion de poder construir vuelve a estar disponible
     {
 
         switch (col.gameObject.layer)
@@ -94,6 +95,8 @@ public class Estructuras : MonoBehaviour
             case 7:
             case 8:
             case 10:
+            case 12:
+
                 if (colocada == false)
                 {
                     construccionManager.setPuedeCons(true);
