@@ -7,15 +7,19 @@ public class Menu_Ingame : MonoBehaviour
     public GameObject UI_Pausa;
     public GameObject UI_GameOver;
     public GameObject UI_Victoria;
+    public GameObject UI_Ingame;
+    public GameObject UI_Introduccion;
 
     [HideInInspector] public static bool vivo = true;
     [HideInInspector] public static bool victoria = false;
 
     private void Start()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 0f;
         UI_GameOver.SetActive(false);
         UI_Victoria.SetActive(false);
+        UI_Introduccion.SetActive(true);
+        UI_Ingame.SetActive(false);
         vivo = true;
         victoria = false;
     }
@@ -34,7 +38,7 @@ public class Menu_Ingame : MonoBehaviour
             UI_Victoria.SetActive(true);
         }
 
-        if (Input.GetKeyDown("p") || Input.GetKeyDown(KeyCode.Escape))
+        if ((Input.GetKeyDown("p") || Input.GetKeyDown(KeyCode.Escape)) && UI_Introduccion.activeSelf == false)
         {
             activarPausa();
         }
@@ -70,4 +74,10 @@ public class Menu_Ingame : MonoBehaviour
         SceneManager.LoadScene("MenuPrincipal");
     }
 
+    public void empezarPartida()
+    {
+        Time.timeScale = 1f;
+        UI_Introduccion.SetActive(false);
+        UI_Ingame.SetActive(true);
+    }
 }

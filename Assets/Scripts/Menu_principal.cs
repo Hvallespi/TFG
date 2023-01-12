@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Menu_principal : MonoBehaviour
 {
+    public GameObject UI_MenuPrincipal;
+    public GameObject UI_Ajustes;
     public string nivelCargar = "Nivel1";
     public Texture2D cursor;
 
@@ -24,6 +26,13 @@ public class Menu_principal : MonoBehaviour
 
     public void ajustesJuego()
     {
-        Debug.Log("Ajustes");
+        UI_Ajustes.SetActive(true);
+        UI_MenuPrincipal.SetActive(false);
+    }
+
+    public void volverAMenu()
+    {
+        UI_Ajustes.SetActive(false);
+        UI_MenuPrincipal.SetActive(true);
     }
 }

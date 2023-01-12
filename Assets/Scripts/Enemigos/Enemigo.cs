@@ -15,7 +15,7 @@ public class Enemigo : MonoBehaviour
     [Header("Unity Setups")]
     public AIPath aiPath;
     public Image barraVida;
-    public AudioClip sonidoMuerte;
+    public AudioSource sonidoMuerte;
 
     private float cuentaAtrasAtaque = 1f;
     private bool muerto = false;
@@ -54,8 +54,9 @@ public class Enemigo : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
 
         transform.gameObject.tag = "Untagged"; //El objeto tarda un poco en destruirse para que se pueda ver la animacion de muerte, por eso al cambiarle el tag las torretas ya no seleccionaran a un enemigo muerto
-       
-        AudioSource.PlayClipAtPoint(sonidoMuerte, transform.position);
+
+        //AudioSource.PlayClipAtPoint(sonidoMuerte, transform.position);
+        sonidoMuerte.Play();
 
         animator.SetTrigger("Muerto");
         Destroy(gameObject,0.7f);
