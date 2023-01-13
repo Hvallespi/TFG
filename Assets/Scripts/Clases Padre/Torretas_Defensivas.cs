@@ -8,7 +8,7 @@ public class Torretas_Defensivas : Estructuras
     public Torretas torreta;
 
     [Header("Unity Setups Torretas")]
-    public AudioClip sonidoDisparo;
+    public AudioSource sonidoDisparo;
     public GameObject balaPrefab; //Que proyectil disparara la torreta
     public Transform puntoDisparo; //Desde donde se generara el proyectil
     public string tagEnemigos = "Enemigo"; //A que puede apuntar la torreta
@@ -96,7 +96,7 @@ public class Torretas_Defensivas : Estructuras
         GameObject balaGO = Instantiate(balaPrefab, puntoDisparo.position, puntoDisparo.rotation); //Se instancia un proyectil que esta apuntando al objetivo
         Bala bala = balaGO.GetComponent<Bala>(); //Guardamos el componente en una variable
 
-        AudioSource.PlayClipAtPoint(sonidoDisparo, transform.position);
+        sonidoDisparo.Play();
 
         if (bala != null) //Para luego darle un objetivo
         {

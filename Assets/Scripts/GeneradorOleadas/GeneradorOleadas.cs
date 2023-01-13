@@ -12,11 +12,17 @@ public class GeneradorOleadas : MonoBehaviour
     public List<Rondas> ronda = new List<Rondas>();
 
     public float tiempoOleadas = 5f;
+    public float tiempoPreparacionInicial;
     private float cuentaAtras = 3f;
     private int indexOleada = 0;
 
     public TextMeshProUGUI tiempoOleadaTXT;
     public TextMeshProUGUI indexOleadaTXT;
+
+    private void Start()
+    {
+        cuentaAtras = tiempoPreparacionInicial;
+    }
 
     private void Update()
     {

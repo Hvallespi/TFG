@@ -7,11 +7,12 @@ public class BuildingManager : MonoBehaviour
 
     public GameObject[] construcciones; //Array que contendra todos los tipos de torreta
 
-    private GameObject uiTienda;
+    public GameObject uiTienda;
 
     private GameObject objetoPendiente; //Objeto que se va a construir
     private bool puedeConstruir = true; //Por defecto se asume que si se puede construir la torreta
     private bool modoDestruir = false;
+    private int index;
 
     private Vector3 pos;
     private Estructuras estructuraActual;
@@ -24,13 +25,12 @@ public class BuildingManager : MonoBehaviour
     public void cambiarConstruccion(Estructuras estructuraActual)
     {
         this.estructuraActual = estructuraActual;
-        Debug.Log(this.estructuraActual);
     }
 
     private void Start()
     {
         Cursor.SetCursor(cursores[0], Vector2.zero, CursorMode.Auto);
-        uiTienda = GameObject.FindGameObjectWithTag("UI_Ingame");
+        //uiTienda = GameObject.FindGameObjectWithTag("UI_Ingame");
     }
 
     void Update()
@@ -40,15 +40,12 @@ public class BuildingManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && Time.timeScale != 0)
             {
-                RaycastHit2D impacto = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+                RaycastHit2D impacto = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero,Mathf.Infinity,6);
 
                 if (impacto.collider != null)
                 {
-                    if (impacto.collider.tag == "Construcciones")
-                    {
-                        EstadisticasJugador.piedra += (int)(impacto.transform.gameObject.GetComponent<Estructuras>().getCosteTorreta() * 0.65); //Al destruir se devuelve un 65% del precio original
-                        Destroy(impacto.transform.gameObject);
-                    };
+                    EstadisticasJugador.piedra += (int)(impacto.transform.gameObject.GetComponent<Estructuras>().getCosteTorreta() * 0.65); //Al destruir se devuelve un 65% del precio original
+                    Destroy(impacto.transform.gameObject);
                 }
 
                 
@@ -70,6 +67,7 @@ public class BuildingManager : MonoBehaviour
             {
                cancelarColocar();
             }
+
         }
         else 
         {
@@ -99,9 +97,18 @@ public class BuildingManager : MonoBehaviour
 
         AstarPath.active.Scan(); //Al colocar el objeto se realiza un analisis del mapa para que el pathfinding la tenga en cuenta a la hora de hacer los calculos
         EstadisticasJugador.piedra -= estructuraActual.getCosteTorreta(); //Se cobra el coste de la torreta
-      
-        estructuraActual = null; // Se limpian las variables para estar listas en el caso de que se coloque una nueva torreta
-        objetoPendiente = null;
+
+        if (estructuraActual.getCosteTorreta() > EstadisticasJugador.piedra) //Si no queda piedra suficiente para poner otra torreta se cancela la colocacion
+        {
+            estructuraActual = null; // Se limpian las variables para estar listas para seguir colocando la torreta
+            objetoPendiente = null;
+            
+        }
+        else //En caso contrario deja construir mas
+        {
+
+            seleccionarObjeto(index);
+        }      
     }
 
     public void cancelarColocar()
@@ -123,7 +130,10 @@ public class BuildingManager : MonoBehaviour
 
     public void seleccionarObjeto(int index)
     {
+        estructuraActual = null;
+        objetoPendiente = null;
         objetoPendiente = Instantiate(construcciones[index], pos, transform.rotation);
+        this.index = index;
     }
 
     float redondearCuadricula(float pos)

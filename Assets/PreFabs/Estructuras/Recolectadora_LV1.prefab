@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6172689638370081038}
   - component: {fileID: 5911169545024393242}
   - component: {fileID: 8187372814052848390}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Barra Progreso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 8028590210261486881}
   - component: {fileID: 6779380745695134337}
   - component: {fileID: 3302370610719512972}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Progreso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 2019401155264372067}
   - component: {fileID: 3085956061873738990}
   - component: {fileID: 148382032378436939}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: ProgresoBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 6806386900532305565}
   - component: {fileID: 6806386900532305564}
   - component: {fileID: 6806386900532305563}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Barra de vida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 6806386901873709030}
   - component: {fileID: 6806386901873709016}
   - component: {fileID: 6806386901873709031}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: VidaBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -660,7 +660,7 @@ GameObject:
   - component: {fileID: 6806386902078844587}
   - component: {fileID: 6806386902078844589}
   - component: {fileID: 6806386902078844588}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Vida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -735,7 +735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6806386902183903364}
   - component: {fileID: 6806386902183903365}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Hitbox_Jugador
   m_TagString: Construcciones
   m_Icon: {fileID: 0}

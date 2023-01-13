@@ -50,7 +50,7 @@ public class Menu_ajustes : MonoBehaviour
         }
 
         volumenTXT.SetText(volumenEnTexto.ToString()    );
-        resolucionTXT.SetText(resolucionActual.width + "x" + resolucionActual.height);
+        resolucionTXT.SetText(resolucionActual.width + "x" + resolucionActual.height + " " + resolucionActual.refreshRate);
         audioMixer.SetFloat("Master", Mathf.Log10(configuracionVol.volumen/100)*20);
     }
 
