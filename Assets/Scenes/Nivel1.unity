@@ -1007,7 +1007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boton: {fileID: 483353740}
-  objetoEnTienda: {fileID: 11400000, guid: de0735c82b97b4f4dbbe1ebb37aeef51, type: 2}
+  objetoEnTienda: {fileID: 11400000, guid: 157a1646dce504d42b2dc595ef5ceaae, type: 2}
 --- !u!114 &483353739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1914,7 +1914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boton: {fileID: 607274492}
-  objetoEnTienda: {fileID: 11400000, guid: de0735c82b97b4f4dbbe1ebb37aeef51, type: 2}
+  objetoEnTienda: {fileID: 11400000, guid: fbe5f8857821d994f822c35203900842, type: 2}
 --- !u!114 &607274491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5974,13 +5974,8 @@ MonoBehaviour:
     - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
       tiempo: 0.4
     - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
-      tiempo: 0.4
-  - enemigosEnRonda:
+      tiempo: 8
     - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
-      tiempo: 0.4
-    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
-      tiempo: 0.4
-    - enemigoGenerado: {fileID: 6506311799924960259, guid: f6ba4094dfbe98a4cbdad0943e8c8012, type: 3}
       tiempo: 0.4
     - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
       tiempo: 0.4
@@ -5992,12 +5987,87 @@ MonoBehaviour:
     - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
       tiempo: 0.4
     - enemigoGenerado: {fileID: 6506311799924960259, guid: f6ba4094dfbe98a4cbdad0943e8c8012, type: 3}
+      tiempo: 4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
       tiempo: 0.4
     - enemigoGenerado: {fileID: 6506311799924960259, guid: f6ba4094dfbe98a4cbdad0943e8c8012, type: 3}
-      tiempo: 1.5
+      tiempo: 0.4
+  - enemigosEnRonda:
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 6
     - enemigoGenerado: {fileID: 6506311799924960259, guid: 416fac6d3b8b52d45a9e598dfda98af4, type: 3}
       tiempo: 0.4
-  tiempoOleadas: 20
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: f6ba4094dfbe98a4cbdad0943e8c8012, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: f6ba4094dfbe98a4cbdad0943e8c8012, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+  - enemigosEnRonda:
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: 416fac6d3b8b52d45a9e598dfda98af4, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: 416fac6d3b8b52d45a9e598dfda98af4, type: 3}
+      tiempo: 2
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: f6ba4094dfbe98a4cbdad0943e8c8012, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: f6ba4094dfbe98a4cbdad0943e8c8012, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: f6ba4094dfbe98a4cbdad0943e8c8012, type: 3}
+      tiempo: 1
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+  - enemigosEnRonda:
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: 416fac6d3b8b52d45a9e598dfda98af4, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: 416fac6d3b8b52d45a9e598dfda98af4, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: 416fac6d3b8b52d45a9e598dfda98af4, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: 416fac6d3b8b52d45a9e598dfda98af4, type: 3}
+      tiempo: 1
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: dc4551365454e0641ab60ab19263ab32, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: f6ba4094dfbe98a4cbdad0943e8c8012, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: f6ba4094dfbe98a4cbdad0943e8c8012, type: 3}
+      tiempo: 0.4
+    - enemigoGenerado: {fileID: 6506311799924960259, guid: f6ba4094dfbe98a4cbdad0943e8c8012, type: 3}
+      tiempo: 0.4
+  tiempoOleadas: 25
   tiempoPreparacionInicial: 30
   tiempoOleadaTXT: {fileID: 389331025}
   indexOleadaTXT: {fileID: 1713701637}
@@ -6028,7 +6098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13173b50007b25a4fb39828b6365f075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  piedraInicial: 2000
+  piedraInicial: 1200
   dineroTexto: {fileID: 592846687}
 --- !u!114 &1109431239
 MonoBehaviour:

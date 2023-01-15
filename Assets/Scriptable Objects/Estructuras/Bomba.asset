@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Bomba
   m_EditorClassIdentifier: 
   vidaInicial: 4
-  coste: 350
-  rangoTorreta: 4.5
-  velAtaque: 0.5
+  coste: 275
+  rangoTorreta: 5.5
+  velAtaque: 0.6
   ajusteRotacion: 0
   cuentaAtrasDisparo: 1

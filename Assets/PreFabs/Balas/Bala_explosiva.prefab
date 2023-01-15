@@ -117,8 +117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 10
-  "da\xF1o": 1.5
-  radioExplosion: 0.85
+  "da\xF1o": 1.75
+  radioExplosion: 1.5
   animacion: {fileID: 1983033565259763190}
   sonidoExplosion: {fileID: 2720885925210304472}
 --- !u!95 &1983033565259763190

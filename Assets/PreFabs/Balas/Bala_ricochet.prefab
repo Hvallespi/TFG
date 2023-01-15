@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 15
-  "da\xF1o": 2
+  "da\xF1o": 1.5
   numeroRebotes: 2
   tagEnemigos: Enemigo
 --- !u!70 &-7604699624873659445

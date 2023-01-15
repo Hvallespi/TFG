@@ -15,4 +15,4 @@ MonoBehaviour:
   vidaInicial: 5
   coste: 125
   velRecoleccion: 4
-  NumRecursosRecolectados: 15
+  NumRecursosRecolectados: 20
